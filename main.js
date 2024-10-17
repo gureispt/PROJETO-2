@@ -54,7 +54,7 @@ function updateTable(){
 function updateFinalAverage(){
     const finalAverage = calcFinalAverage();
 
-    document.getElementById('final-average').innerHTML = finalAverage;
+    document.getElementById('final-average').innerHTML = finalAverage.toFixed(2);
     document.getElementById('result').innerHTML = finalAverage >= noteMin ? spanAproved : spanReproved;
 }
 // Função que calcula a média
@@ -65,6 +65,5 @@ function calcFinalAverage(){
         sumNotes += notes[i];
     }
 
-    const result = sumNotes / notes.length;
-    return result.toFixed(2);
+    return sumNotes / notes.length;
 }
